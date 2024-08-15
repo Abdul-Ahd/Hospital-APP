@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".discharge">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Patient_Found">
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Date"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:hint=" Patient Record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/patientSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp" />
+
+            <!-- Patient Record Layout -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/patientRecordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/border_bg"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <!-- Patient id -->
+                    <TextView
+                        android:id="@+id/pID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#010627"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/patientNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name: " />
+
+                    <!-- Clinic -->
+                    <TextView
+                        android:id="@+id/ageCNICGenderTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age: - CNIC: - Gender: " />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address: " />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/patentTreatmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient Status"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <RadioGroup
+            android:id="@+id/patientStatusRadioGroup"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patentTreatmentTextView">
+
+            <!-- Recovered Radio Button -->
+            <RadioButton
+                android:id="@+id/recoveredRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recovered" />
+
+            <!-- Discharged Radio Button -->
+            <RadioButton
+                android:id="@+id/dischargedRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discharged" />
+
+            <!-- Under Observation Radio Button -->
+            <RadioButton
+                android:id="@+id/observationRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Under Observation" />
+
+            <!-- Terminal Radio Button -->
+            <RadioButton
+                android:id="@+id/terminalRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terminal" />
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Save"
+        android:textColor="#FFFAFC"
+        android:textSize="24sp"
+        android:typeface="monospace"
+        app:backgroundTint="#010627"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

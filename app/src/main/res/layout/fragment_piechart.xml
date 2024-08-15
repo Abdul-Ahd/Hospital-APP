@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".piechart">
+
+    <LinearLayout
+        android:id="@+id/datelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:rotationX="4">
+
+        <EditText
+            android:id="@+id/startDateEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:focusable="false"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:onClick="showStartDatePicker"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="TO"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/endDateEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:focusable="false"
+            android:hint="End Date"
+            android:inputType="date"
+
+            android:onClick="showEndDatePicker"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="60dp" />
+
+</FrameLayout>

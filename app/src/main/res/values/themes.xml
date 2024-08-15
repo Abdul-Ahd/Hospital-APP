@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Gis" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#010627</item> <!-- Define your primary color -->
+        <!-- Define your button background color -->
+        <item name="android:statusBarColor">#010627</item>
+    </style>
+
+    <style name="Theme.Gis" parent="Base.Theme.Gis" />
+</resources>

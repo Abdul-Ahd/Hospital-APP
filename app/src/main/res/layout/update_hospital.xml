@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="367dp"
+    android:padding="18dp"
+    android:background="@drawable/transparent_background"
+    >
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <EditText
+        android:id="@+id/cap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <EditText
+        android:id="@+id/doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <Button
+        android:id="@+id/saveH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:insetLeft="130dp"
+        android:justificationMode="none"
+        android:text="Save" />
+
+</LinearLayout>

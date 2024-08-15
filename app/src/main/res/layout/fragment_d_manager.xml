@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dManager">
+    <!--    android:id="@+id/patientbutton"-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#010627"
+        android:text="Disease Management"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="35dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <!-- First Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- First Button and Text -->
+                <ImageButton
+                    android:id="@+id/patientbutton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/paitenadd"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/addPatientText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Patient"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Second Button and Text -->
+                <ImageButton
+                    android:id="@+id/diseaseButton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/disease"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/addDiseaseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Disease"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Third Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Third Button and Text -->
+                <ImageButton
+                    android:id="@+id/HospitalButton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ihospital"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/addHospitalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Hospital"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <!-- Fourth Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Fourth Button and Text -->
+                <ImageButton
+                    android:id="@+id/RecordButton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/managerecord"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/addRecordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Record"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Fifth Column -->
+            <LinearLayout
+                android:id="@+id/treatment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Fifth Button and Text -->
+                <ImageButton
+                    android:id="@+id/docEffort"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/doctoricon"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/doceffortText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Treatment"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Sixth Column -->
+            <LinearLayout
+                android:id="@+id/patDischarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Sixth Button and Text -->
+                <ImageButton
+                    android:id="@+id/dischargeBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ambulanceicon"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/dischargeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Discharge"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <!--    <TextView-->
+        <!--        android:layout_width="100dp"-->
+        <!--        android:layout_height="50dp"-->
+        <!--        android:textSize="18dp"-->
+        <!--        android:text="Add Record"-->
+        <!--        android:fontFamily="@font/poppins_medium"-->
+        <!--        android:layout_marginTop="170dp"-->
+        <!--        android:layout_marginLeft="290dp"-->
+        <!--        android:textAlignment="center"-->
+        <!--        android:textStyle="bold"-->
+        <!--        />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            >
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- First Button and Text -->
+                <ImageButton
+                    android:id="@+id/viewMapBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="@drawable/worldmap2"
+                    android:scaleType="fitCenter"
+
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/viewMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:text="Map"
+                    android:textColor="?attr/colorAccent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:textAlignment="center"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/manageRecordLayout"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/manageRecordBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="@drawable/editrecord"
+                    android:scaleType="fitCenter"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/manageRecord"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+
+                    android:text="Edit Record"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/ReportViewBtn"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@android:color/transparent"
+                    android:foreground="@drawable/report"
+                    android:scaleType="fitCenter"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/ReportView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+
+                    android:text="Report"
+                    android:textColor="?attr/colorAccent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/BarChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="8dp"
+                android:text="View BarChart"
+                android:textColor="?attr/colorAccent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

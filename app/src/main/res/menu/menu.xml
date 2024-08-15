@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:visible="true">
+        <item
+            android:id="@+id/homeMenu"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/Eventhandle"
+            android:icon="@drawable/baseline_desktop_windows_24"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/EventMang"
+            android:enabled="true"
+            android:icon="@drawable/earth"
+            android:title="Event Manager"
+            android:visible="false" />
+        <item
+            android:id="@+id/Disease"
+            android:icon="@drawable/coronavirus_svgrepo_com"
+            android:title="Disease Manager" />
+
+
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="Options">
+            <menu>
+                <item android:id="@+id/createUser"
+                    android:icon="@drawable/createuser"
+                    android:title="Create User"/>
+                <item android:id="@+id/logout"
+                    android:icon="@drawable/logout"
+                    android:title="LogOut"/>
+            </menu>
+        </item>
+
+    </group>
+
+</menu>

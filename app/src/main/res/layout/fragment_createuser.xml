@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F4F4">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#010627"
+        android:text="User Control"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"/>
+    <LinearLayout
+        android:id="@+id/newuserview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/newuser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/newuser"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create User"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp"
+            android:fontFamily="@font/walter_turncoat"
+            android:textColor="#010627"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/manageuserview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/manageuser"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/mangeuser"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage user"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="30sp"
+            android:fontFamily="@font/walter_turncoat"
+            android:textColor="#010627"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/chngpw"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/repass"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change Passwpord"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="29sp"
+            android:fontFamily="@font/walter_turncoat"
+            android:textColor="#010627"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/newDoctor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/doctoricon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Doctor"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="29sp"
+            android:fontFamily="@font/walter_turncoat"
+            android:textColor="#010627"/>
+
+    </LinearLayout>
+    <!--    android:backgroundTint="#DC4B4B"-->
+</LinearLayout>

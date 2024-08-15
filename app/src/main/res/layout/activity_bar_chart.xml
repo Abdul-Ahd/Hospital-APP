@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Start Date picker -->
+    <LinearLayout
+        android:id="@+id/datelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/startDateEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:focusable="false"
+            android:onClick="showStartDatePicker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/endDateEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="End Date"
+            android:inputType="date"
+            android:focusable="false"
+
+            android:onClick="showEndDatePicker" />
+
+    </LinearLayout>
+
+    <AutoCompleteTextView
+        android:id="@+id/diseaseAutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datelayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Select Disease" />
+
+    <!-- BarChart view -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/diseaseAutoCompleteTextView"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Manage_Record">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search Patient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/patientSpinnertoget"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/billnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIll NO"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billnumber">
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Date"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Patient Record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/patientSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp" />
+
+            <!-- Patient Record Layout -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/patientRecordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/border_bg"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <!-- Patient id -->
+                    <TextView
+                        android:id="@+id/pID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#010627"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/patientNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name: " />
+
+                    <!-- Clinic -->
+                    <TextView
+                        android:id="@+id/ageCNICGenderTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age: - CNIC: - Gender: " />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address: " />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/diseselayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Disease"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/DSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    <AutoCompleteTextView-->
+        <!--        android:layout_margin="8dp"-->
+        <!--        app:cardCornerRadius="8dp"-->
+        <!--        app:cardElevation="4dp"-->
+        <!--        android:id="@+id/DSpinner"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:hint="Disease"-->
+        <!--        android:maxLines="1"-->
+        <!--        android:singleLine="true"-->
+        <!--        app:layout_constraintEnd_toEndOf="@id/textInputLayout2"-->
+        <!--        app:layout_constraintStart_toStartOf="@id/textInputLayout2"-->
+        <!--        app:layout_constraintTop_toBottomOf="@id/textInputLayout2" />-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hospitallayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Hospital Record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diseselayout">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/HSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    <AutoCompleteTextView-->
+        <!--        android:id="@+id/HSpinner"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_margin="8dp"-->
+        <!--        android:hint="Hospital"-->
+        <!--        android:maxLines="1"-->
+        <!--        android:singleLine="true"-->
+        <!--        app:cardCornerRadius="8dp"-->
+        <!--        app:cardElevation="4dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="@id/textInputLayout2"-->
+        <!--        app:layout_constraintStart_toStartOf="@id/textInputLayout2"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/diseselayout" />-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hospitallayout">
+
+            <LinearLayout
+                android:id="@+id/hospitalRecordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/border_bg"
+                android:orientation="vertical"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+
+                <!-- Patient id -->
+                <TextView
+                    android:id="@+id/HID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#010627"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Hname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name: " />
+
+                <!-- Clinic -->
+                <TextView
+                    android:id="@+id/Hlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location:" />
+
+                <TextView
+                    android:id="@+id/Hcap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Capacity:- Doctor: - " />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Location Where Patient Got Reported"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/latitudeInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Latitude"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/latitudeEditTextR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/longitudeInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Longitude"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/longitudeEditTextR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/weatherinput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:hint="Weather"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <Spinner
+                android:id="@+id/weatherSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/weather_options"
+                android:textAlignment="center" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Paitent Condtion"
+            app:cardCornerRadius="8dp"
+
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/weatherinput"
+            tools:layout_editor_absoluteX="8dp">
+
+            <Spinner
+                android:id="@+id/conditionspinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/patient_condition"
+                android:textAlignment="center" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteRec"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:text="Delete"
+        android:textColor="#FFFAFC"
+        android:textSize="24sp"
+        android:typeface="sans"
+        app:backgroundTint="#010627"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateRec"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:text="Update"
+        android:textColor="#FFFAFC"
+        android:textSize="24sp"
+        android:typeface="sans"
+        app:backgroundTint="#010627"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

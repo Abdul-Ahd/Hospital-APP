@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="367dp"
+    android:padding="18dp"
+    android:background="@drawable/transparent_background"
+    >
+
+    <EditText
+        android:id="@+id/id1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        />
+
+    <EditText
+        android:id="@+id/name1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <EditText
+        android:id="@+id/cnic1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+         />
+
+    <EditText
+        android:id="@+id/address1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     />
+
+
+    <EditText
+        android:id="@+id/birth1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:focusable="false"
+        android:clickable="true"
+       />
+
+    <Spinner
+        android:id="@+id/Gender1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:entries="@array/gender" />
+    <Button
+        android:id="@+id/savep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:insetLeft="130dp"
+        android:justificationMode="none"
+        android:text="Save" />
+
+</LinearLayout>

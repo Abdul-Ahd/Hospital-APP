@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Insert_Hospital">
+
+    <TextView
+        android:id="@+id/patext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Data View"
+        android:background="#C8C5D1"
+        android:textSize="40dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Search Hospital"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:textSize="22dp"
+            android:textColor="@android:color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_marginTop="125dp"
+        android:background="#C7C4D0"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

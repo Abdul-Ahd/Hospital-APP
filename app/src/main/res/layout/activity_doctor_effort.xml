@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Patient_Found">
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="Date"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint=" Patient Record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/patientSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp" />
+
+            <!-- Patient Record Layout -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/patientRecordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/border_bg"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <!-- Patient id -->
+                    <TextView
+                        android:id="@+id/pID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#010627"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/patientNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name: " />
+
+                    <!-- Clinic -->
+                    <TextView
+                        android:id="@+id/ageCNICGenderTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Age: - CNIC: - Gender: " />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Address: " />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<LinearLayout
+    android:id="@+id/medilayout"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.495"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/patentTreatmentTextView">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/medispinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Type to add" />
+
+
+
+            <Button
+                android:id="@+id/addMeddiButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Medicine"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    <GridView
+        android:id="@+id/medigridView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:numColumns="1"
+        android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+</LinearLayout>
+
+
+        <TextView
+            android:id="@+id/patentTreatmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicine"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+        <TextView
+            android:id="@+id/patentTestTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tests"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medilayout" />
+
+
+
+        <LinearLayout
+            android:id="@+id/testlayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patentTestTextView">
+
+            <LinearLayout
+
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/patentTestTextView">
+
+            <EditText
+                android:id="@+id/testSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Type to add" />
+
+
+
+            <Button
+                android:id="@+id/addTestButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Test"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/testgridView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false"
+                android:numColumns="1"
+                android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Treatment Type"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/testlayout"
+            />
+
+        <LinearLayout
+            android:id="@+id/treatmentTypelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            <Spinner
+                android:id="@+id/treatmentType"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:entries="@array/treatmentType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Save"
+            android:textColor="#FFFAFC"
+            android:textSize="24sp"
+            android:typeface="monospace"
+            app:backgroundTint="#010627"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/treatmentTypelayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
